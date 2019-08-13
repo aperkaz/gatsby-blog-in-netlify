@@ -16,13 +16,16 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+            margin: rhythm(1.5),
+            paddingTop: rhythm(1),
+            transform: `skew(0deg, 5deg)`,
           }}
         >
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
-              color: `inherit`,
+              color: `white`,
             }}
             to={`/`}
           >
@@ -36,6 +39,12 @@ class Layout extends React.Component {
           style={{
             fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
+            margin: rhythm(1.5),
+            paddingTop: rhythm(1),
+            transform: `skew(0deg, 5deg)`,
+            padding: rhythm(3),
+            backgroundColor: 'white',
+            marginBottom: rhythm(4)
           }}
         >
           <Link
@@ -60,7 +69,10 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <header>{header}</header>
+        <header style={{
+          transform: `skew(0deg, -5deg)`,
+          backgroundColor: 'grey'
+        }}>{header}</header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
